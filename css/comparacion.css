@@ -1,0 +1,257 @@
+/* ===== REINICIO GENERAL ===== */
+/* Elimina los márgenes y rellenos por defecto y define el modelo de caja estándar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== CONFIGURACIÓN GLOBAL ===== */
+/* Define la tipografía, colores base y fondo del documento */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #F4F6F7; /* Fondo gris claro */
+    color: #2C3E50; /* Texto gris oscuro */
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+/* Barra superior de navegación con fondo degradado */
+#menu {
+    background: linear-gradient(90deg, #2C3E50, #34495E);
+    padding: 0 20px;
+}
+
+/* Lista de elementos del menú con disposición horizontal */
+#menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    height: 60px;
+    align-items: center;
+}
+
+/* Separación entre los botones del menú */
+.menuprincipal {
+    margin-left: 15px;
+}
+
+/* ===== ENLACES DEL MENÚ ===== */
+/* Define color y estilo de los enlaces */
+.menuprincipal a {
+    text-decoration: none;
+    color: #ECF0F1;
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto visual al pasar el mouse o cuando está activo */
+.menuprincipal a:hover,
+.menuprincipal a.activo {
+    background-color: #E67E22;
+    color: white;
+}
+
+/* ===== CABECERA ===== */
+/* Encabezado principal de la página con color de fondo naranja */
+#cabecera {
+    background: #E67E22;
+    text-align: center;
+    padding: 25px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Título principal del encabezado */
+#cabecera h1 {
+    font-size: 28px;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+/* Centra el contenido y ajusta su ancho máximo */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ===== SECCIONES DE COMPARACIÓN ===== */
+/* Cada bloque de información comparativa se presenta como tarjeta */
+section {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+/* Títulos de las secciones con borde lateral naranja */
+section h2 {
+    margin-bottom: 10px;
+    color: #34495E;
+    border-left: 5px solid #E67E22;
+    padding-left: 10px;
+}
+
+/* ===== TABLAS COMPARATIVAS ===== */
+/* Estructura base de la tabla que muestra Año 1 vs Año 2 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Bordes de las celdas y alineación de contenido */
+table th, table td {
+    border: 1px solid #BDC3C7;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Encabezado de la tabla con fondo oscuro */
+table th {
+    background-color: #2C3E50;
+    color: white;
+}
+
+/* Filas alternadas con fondo más claro */
+table tr:nth-child(even) {
+    background-color: #F2F3F4;
+}
+
+/* Efecto visual al pasar el cursor sobre una fila */
+table tr:hover {
+    background-color: #FDEBD0;
+    transition: background 0.3s ease;
+}
+
+/* ===== GALERÍA DE IMÁGENES ===== */
+/* Contenedor principal que distribuye las imágenes en cuadrícula */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Distribución adaptable */
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Cada imagen dentro de la galería */
+.galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de zoom y sombra al pasar el cursor */
+.galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* ===== PIE DE PÁGINA ===== */
+/* Sección inferior con fondo oscuro y texto claro */
+footer {
+    background: #2C3E50;
+    color: #ECF0F1;
+    padding: 25px 15px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Contenedor que agrupa el escudo y la información institucional */
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Tamaño y proporción del escudo institucional */
+footer .escudo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* Texto con los datos de contacto */
+footer .info p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+/* Línea inferior con derechos o créditos */
+footer .copy {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #BDC3C7;
+}
+/* ===== PIE DE PÁGINA MODERNO ===== */
+footer {
+    background: #2C3E50;
+    color: #ECF0F1;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 3px solid #E67E22; /* Línea superior decorativa */
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+}
+
+footer .escudo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+footer .info {
+    text-align: left;
+}
+
+footer .info p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #ECF0F1;
+}
+
+footer .info strong {
+    color: #E67E22;
+}
+
+footer .copy {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #BDC3C7;
+    letter-spacing: 0.5px;
+}
+
+/* Adaptación móvil */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .info {
+        text-align: center;
+    }
+
+    footer .escudo {
+        width: 70px;
+        height: 70px;
+    }
+}

@@ -1,0 +1,269 @@
+/* ===== REINICIO GENERAL ===== */
+/* Restablece márgenes, rellenos y define el modelo de caja para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== ESTILO BASE DEL DOCUMENTO ===== */
+/* Define la tipografía general, el color del texto, el fondo y la altura de línea */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #F4F6F7; /* Fondo gris muy claro */
+    color: #2C3E50; /* Texto gris azulado */
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+/* Configura el menú principal con un fondo degradado y posición fija superior */
+#menu {
+    background: linear-gradient(90deg, #2C3E50, #34495E);
+    padding: 0 20px;
+}
+
+/* Distribuye los elementos del menú de manera horizontal */
+#menu ul {
+    display: flex;
+    list-style: none; /* Elimina los puntos predeterminados */
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    height: 60px;
+    align-items: center;
+}
+
+/* Espaciado entre los botones del menú */
+.menuprincipal {
+    margin-left: 15px;
+}
+
+/* ===== ENLACES DEL MENÚ ===== */
+/* Define el color, tamaño y comportamiento visual de los enlaces */
+.menuprincipal a {
+    text-decoration: none;
+    color: #ECF0F1; /* Color claro para contraste con el fondo oscuro */
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Suaviza la animación al pasar el cursor */
+}
+
+/* Efecto al pasar el cursor o para el enlace activo */
+.menuprincipal a:hover,
+.menuprincipal a.activo {
+    background-color: #E67E22; /* Naranja intenso */
+    color: white;
+}
+
+/* ===== CABECERA ===== */
+/* Encabezado del sitio con fondo naranja y texto centrado */
+#cabecera {
+    background: #E67E22;
+    text-align: center;
+    padding: 25px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Sombra inferior sutil */
+}
+
+/* Título principal del encabezado */
+#cabecera h1 {
+    font-size: 28px;
+}
+
+/* ===== DISTRIBUCIÓN GENERAL DEL CONTENIDO ===== */
+/* Crea un diseño de dos columnas: texto e imagen */
+.layout {
+    display: flex;
+    gap: 20px; /* Espacio entre columnas */
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ===== COLUMNA DE TEXTO (IZQUIERDA) ===== */
+/* Contiene los módulos del texto en bloques separados */
+.col-texto {
+    flex: 2; /* Ocupa más espacio que la imagen */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== COLUMNA DE IMAGEN (DERECHA) ===== */
+/* Muestra una imagen grande fija al lado derecho */
+.col-imagen {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Imagen con bordes redondeados y posición fija mientras se hace scroll */
+.col-imagen img {
+    width: 100%;
+    max-height: 90vh; /* Limita su altura al 90% de la pantalla */
+    border-radius: 10px;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 20px; /* Se mantiene visible al hacer scroll */
+}
+
+/* ===== SECCIONES DE TEXTO ===== */
+/* Cada bloque de texto está dentro de una tarjeta blanca con sombra */
+section {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* Títulos con línea lateral naranja */
+section h2 {
+    margin-bottom: 10px;
+    color: #34495E;
+    border-left: 5px solid #E67E22;
+    padding-left: 10px;
+}
+
+/* ===== LISTAS ===== */
+/* Da formato a las listas de los objetivos */
+ul {
+    margin-left: 25px;
+    list-style-type: square; /* Usa viñetas cuadradas */
+}
+
+/* ===== TABLAS ===== */
+/* Define la estructura general de las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina el espacio entre bordes */
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Celdas y encabezados con borde gris claro */
+table th, table td {
+    border: 1px solid #BDC3C7;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Cabecera de tabla con fondo azul oscuro y texto blanco */
+table th {
+    background-color: #2C3E50;
+    color: white;
+}
+
+/* Filas alternadas en tonos claros */
+table tr:nth-child(even) {
+    background-color: #F2F3F4;
+}
+
+/* Efecto visual al pasar el cursor sobre una fila */
+table tr:hover {
+    background-color: #FDEBD0;
+    transition: background 0.3s ease;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+/* Fondo oscuro con texto claro centrado */
+footer {
+    background: #2C3E50;
+    color: #ECF0F1;
+    padding: 25px 15px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Contenedor del pie: imagen del escudo e información institucional */
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Escudo del colegio con tamaño fijo */
+footer .escudo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* Información de contacto y ubicación */
+footer .info p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+/* Línea inferior de derechos de autor */
+footer .copy {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #BDC3C7;
+}
+/* ===== PIE DE PÁGINA MODERNO ===== */
+footer {
+    background: #2C3E50;
+    color: #ECF0F1;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 3px solid #E67E22; /* Línea superior decorativa */
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+}
+
+footer .escudo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+footer .info {
+    text-align: left;
+}
+
+footer .info p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #ECF0F1;
+}
+
+footer .info strong {
+    color: #E67E22;
+}
+
+footer .copy {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #BDC3C7;
+    letter-spacing: 0.5px;
+}
+
+/* Adaptación móvil */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .info {
+        text-align: center;
+    }
+
+    footer .escudo {
+        width: 70px;
+        height: 70px;
+    }
+}

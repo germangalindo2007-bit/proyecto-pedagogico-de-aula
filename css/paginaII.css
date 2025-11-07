@@ -1,0 +1,231 @@
+/* ===== REINICIO GENERAL ===== */
+/* Elimina márgenes y rellenos predeterminados del navegador y asegura que el tamaño total incluya bordes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== ESTILO BASE DEL CUERPO ===== */
+/* Define la tipografía, color del texto, fondo y espaciado entre líneas */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #F4F6F7;
+    color: #2C3E50;
+    line-height: 1.6;
+}
+
+/* ===== MENÚ DE NAVEGACIÓN SUPERIOR ===== */
+/* Define el contenedor del menú: color de fondo, posición y comportamiento fijo */
+#menu {
+    background: linear-gradient(90deg, #2C3E50, #34495E);
+    padding: 0 20px;
+    position: sticky; /* El menú se mantiene visible al hacer scroll */
+    top: 0;
+    z-index: 100; /* Asegura que el menú quede por encima del contenido */
+}
+
+/* Estructura del menú: los enlaces se distribuyen horizontalmente */
+#menu ul {
+    display: flex;
+    list-style: none; /* Quita los puntos predeterminados */
+    justify-content: flex-end; /* Alinea los enlaces a la derecha */
+    height: 60px;
+    align-items: center;
+}
+
+/* Separación entre los elementos del menú */
+.menuprincipal {
+    margin-left: 15px;
+}
+
+/* ===== ENLACES DEL MENÚ ===== */
+/* Estilo base de los botones del menú: color, tipografía y transiciones */
+.menuprincipal a {
+    text-decoration: none;
+    color: #ECF0F1;
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Cambia el color del botón cuando se pasa el mouse o está activo */
+.menuprincipal a:hover,
+.menuprincipal a.activo {
+    background-color: #E67E22;
+    color: white;
+}
+
+/* ===== CABECERA PRINCIPAL ===== */
+/* Define la cabecera con imagen de fondo, color superpuesto y texto centrado */
+#cabecera {
+    position: relative;
+    background: url("../img/objetivos.jpg") center/cover no-repeat;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Capa superpuesta semitransparente sobre la imagen para destacar el texto */
+#cabecera .overlay {
+    background: rgba(44, 62, 80, 0.6);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Título principal del encabezado */
+#cabecera h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo descriptivo */
+#cabecera p {
+    font-size: 16px;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+/* Define el ancho máximo del contenido y centra la página */
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ===== SECCIONES ===== */
+/* Cada bloque de texto (objetivo general o específicos) se muestra como tarjeta blanca */
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08); /* Sombra suave para dar profundidad */
+}
+
+/* Títulos de las secciones con línea naranja decorativa a la izquierda */
+section h2 {
+    margin-bottom: 10px;
+    color: #34495E;
+    border-left: 5px solid #E67E22;
+    padding-left: 10px;
+}
+
+/* ===== LISTAS ===== */
+/* Ajuste de listas para mostrar objetivos específicos con estilo limpio */
+ul {
+    margin-left: 25px;
+    list-style-type: square; /* Viñetas cuadradas */
+    color: #2C3E50;
+}
+
+/* Espaciado entre elementos de lista */
+ul li {
+    margin-bottom: 8px;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+/* Fondo oscuro con texto claro y estructura centrada */
+footer {
+    background: #2C3E50;
+    color: #ECF0F1;
+    padding: 25px 15px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Contenedor del pie: organiza el escudo y la información de contacto */
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que se adapte a pantallas pequeñas */
+}
+
+/* Imagen del escudo del colegio */
+footer .escudo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* Información institucional (teléfono, dirección, correo) */
+footer .info p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+/* Texto de derechos de autor al final del pie */
+footer .copy {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #BDC3C7;
+}
+/* ===== PIE DE PÁGINA MODERNO ===== */
+footer {
+    background: #2C3E50;
+    color: #ECF0F1;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 3px solid #E67E22; /* Línea superior decorativa */
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+}
+
+footer .escudo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+footer .info {
+    text-align: left;
+}
+
+footer .info p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #ECF0F1;
+}
+
+footer .info strong {
+    color: #E67E22;
+}
+
+footer .copy {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #BDC3C7;
+    letter-spacing: 0.5px;
+}
+
+/* Adaptación móvil */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .info {
+        text-align: center;
+    }
+
+    footer .escudo {
+        width: 70px;
+        height: 70px;
+    }
+}

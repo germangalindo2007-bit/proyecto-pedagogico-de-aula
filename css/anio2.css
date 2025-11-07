@@ -1,0 +1,269 @@
+/* ===== REINICIO GENERAL ===== */
+/* Quita márgenes y rellenos por defecto, y ajusta el modelo de caja */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== CONFIGURACIÓN BASE ===== */
+/* Define la fuente principal, colores generales y el fondo de toda la página */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #F4F6F7; /* Fondo gris claro */
+    color: #2C3E50; /* Texto gris azulado */
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+/* Barra superior fija con fondo degradado */
+#menu {
+    background: linear-gradient(90deg, #2C3E50, #34495E);
+    padding: 0 20px;
+}
+
+/* Contenedor del menú con los elementos distribuidos horizontalmente */
+#menu ul {
+    display: flex;
+    list-style: none; /* Elimina los puntos de lista */
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    height: 60px;
+    align-items: center;
+}
+
+/* Separación entre elementos del menú */
+.menuprincipal {
+    margin-left: 15px;
+}
+
+/* ===== ENLACES DEL MENÚ ===== */
+/* Configura los botones del menú: color, tamaño y transición */
+.menuprincipal a {
+    text-decoration: none;
+    color: #ECF0F1;
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de hover o botón activo */
+.menuprincipal a:hover,
+.menuprincipal a.activo {
+    background-color: #E67E22; /* Naranja al pasar el cursor */
+    color: white;
+}
+
+/* ===== CABECERA ===== */
+/* Encabezado superior con fondo naranja y texto centrado */
+#cabecera {
+    background: #E67E22;
+    text-align: center;
+    padding: 25px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Título del encabezado */
+#cabecera h1 {
+    font-size: 28px;
+}
+
+/* ===== DISTRIBUCIÓN PRINCIPAL ===== */
+/* Crea dos columnas: imagen a la izquierda y texto a la derecha */
+.layout {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ===== COLUMNA DE IMAGEN (IZQUIERDA) ===== */
+/* Contiene la imagen principal del año 2 */
+.col-imagen {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Imagen grande con bordes redondeados y sombra */
+.col-imagen img {
+    width: 100%;
+    max-height: 90vh;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    position: sticky; /* Mantiene visible al hacer scroll */
+    top: 20px;
+}
+
+/* ===== COLUMNA DE TEXTO (DERECHA) ===== */
+/* Contiene los módulos de texto explicativo */
+.col-texto {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== SECCIONES ===== */
+/* Cada bloque de contenido se muestra dentro de una tarjeta */
+section {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* Títulos de secciones con borde decorativo */
+section h2 {
+    margin-bottom: 10px;
+    color: #34495E;
+    border-left: 5px solid #E67E22;
+    padding-left: 10px;
+}
+
+/* ===== LISTAS ===== */
+/* Ajuste visual para listas con objetivos o puntos destacados */
+ul {
+    margin-left: 25px;
+    list-style-type: square;
+}
+
+/* ===== TABLAS ===== */
+/* Diseño general de las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Bordes, rellenos y alineación */
+table th, table td {
+    border: 1px solid #BDC3C7;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Encabezado oscuro con texto blanco */
+table th {
+    background-color: #2C3E50;
+    color: white;
+}
+
+/* Filas alternadas con fondo suave */
+table tr:nth-child(even) {
+    background-color: #F2F3F4;
+}
+
+/* Efecto de resaltado al pasar el mouse */
+table tr:hover {
+    background-color: #FDEBD0;
+    transition: background 0.3s ease;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+/* Sección inferior con fondo oscuro y texto claro */
+footer {
+    background: #2C3E50;
+    color: #ECF0F1;
+    padding: 25px 15px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Contenedor del pie: alinea escudo y texto institucional */
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Tamaño y proporción del escudo */
+footer .escudo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* Información de contacto */
+footer .info p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+/* Texto de derechos al final */
+footer .copy {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #BDC3C7;
+}
+/* ===== PIE DE PÁGINA MODERNO ===== */
+footer {
+    background: #2C3E50;
+    color: #ECF0F1;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 3px solid #E67E22; /* Línea superior decorativa */
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+}
+
+footer .escudo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+footer .info {
+    text-align: left;
+}
+
+footer .info p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #ECF0F1;
+}
+
+footer .info strong {
+    color: #E67E22;
+}
+
+footer .copy {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #BDC3C7;
+    letter-spacing: 0.5px;
+}
+
+/* Adaptación móvil */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .info {
+        text-align: center;
+    }
+
+    footer .escudo {
+        width: 70px;
+        height: 70px;
+    }
+}
